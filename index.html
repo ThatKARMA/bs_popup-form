@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ru">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap form RBand</title>
+
+    <!-- CSS bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/style.css">
+
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Андреев Кирилл</h1>
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Форма
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-container">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    
+                    <div class="modal-content">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                Обратный звонок
+                                <p class="under_header-text">Заполните форму ниже и мы свяжемся с вами в ближайшее время</p>
+                            </h5>
+                        </div>
+
+                        <div class="modal-body">
+                            
+                            <form class="needs-validation js-form" id="form" action="" method="post" novalidate>
+        
+                                <div class="row">
+                                    
+                                    <div class="col-12">
+                                        <div class="form-group input-box">
+                                            <input type="name" class="form-control" id="validationCustom01" placeholder="Укажите своё имя" required>
+                                            <label for="validationCustom01" class="label-validStyles">Ваше имя * </label>
+                            
+                                            <div class="invalid-feedback">
+                                                Введите своё имя
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                                </div>
+                            
+                                <div class="row">
+                            
+                                    <div class="col-12">
+                                        <div class="form-group input-box">
+                                            <input type="text" class="tel form-control" id="validationCustom02" name="phone" placeholder="+7 (___)-___-__-__" required>
+                                            <label for="exampleFormControlSelect1" class="label-validStyles">Номер телефона * </label>
+                            
+                                            <div class="invalid-feedback">
+                                                Неправильно введён номер
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                                </div>
+                            
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group input-box">
+                            
+                                            <select class="form-select" required aria-label="select example">
+                                                <option class="form-select__option" selected="" disabled="" value="" hidden>Выберите услугу из списка</option>
+                                                <option>Страхование бизнеса</option>
+                                                <option>Страхование жизни</option>
+                                                <option>Страхование имущества</option>
+                                                <option>Страхование автомобиля (КАСКО, ОСАГО)</option>
+                                            </select>
+                                            <label for="exampleFormControlSelect2" class="label-validStyles">Выбранная услуга * </label>
+                            
+                                            <div class="invalid-feedback">Услуга не выбрана</div>
+                                                
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group input-box">
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Опишите Ваш вопрос или просьбу и удобное время для связи" ></textarea>
+                                            <label for="exampleFormControlTextarea1">Комментарий</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- checkbox -->
+                                <div class="row">
+                                    <div class="checkinput-checklabel">
+                                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                        <label class="form-check-label" for="invalidCheck">
+                                            Я ознакомлен и согласен <br> с &nbsp;<a href="#">правилами</a>
+                                        </label>
+                                    </div>
+                                
+                                    <!-- submit -->
+                                    <button type="button" class="btn btn-primary mb-2 submitBtn js-submit">Отправить</button>
+                                    
+                                </div>
+
+                                <div id="success-form">
+                                    Успешно!
+                                </div>
+                            
+                            </form>
+                            
+                        </div>
+    
+                        <div class="modal-footer">
+
+                        </div>
+    
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- MODAL Success -->
+        
+    </div>
+
+    <!-- Подключение JS файла bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <!-- tel.js -->
+    <script src="js/tel.js"></script>
+
+    <script src="js/main.js?a=123"></script>
+
+    <script>
+        (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+            var forms = document.getElementsByClassName('needs-validation');
+            var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+              }, false);
+            });
+          }, false);
+        })();
+    </script>
+
+</body>
+</html>
